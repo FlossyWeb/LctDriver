@@ -1240,7 +1240,7 @@ if ( app ) {
 	function onDeviceReady() {
 		document.addEventListener("resume", onResume, false);
 		document.addEventListener("pause", onPause, false);
-		navigator.splashscreen.hide();
+		//navigator.splashscreen.hide();
 		StatusBar.overlaysWebView(false);
 		StatusBar.backgroundColorByHexString("#0069B4");
 		// prevent device from sleeping
