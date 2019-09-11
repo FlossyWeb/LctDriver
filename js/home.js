@@ -1320,7 +1320,7 @@ if ( app ) {
 			stationaryRadius: 100,
 			distanceFilter: 100,
 			activityType: 'AutomotiveNavigation',
-			debug: false,
+			debug: true,
 			interval: 30000,
 			fastestInterval: 10000,
 			activitiesInterval: 30000,
