@@ -66,10 +66,10 @@
     <plugin name="cordova-plugin-local-notifications" spec="https://github.com/EddyVerbruggen/cordova-plugin-local-notifications" source="git" />  
 	-->
     <plugin name="cordova-plugin-local-notifications" spec="https://github.com/katzer/cordova-plugin-local-notifications" source="git" />  
-	<!-- <plugin name="cordova-plugin-background-mode" source="npm" spec="0.7.2" /> -->
 	<!-- <plugin name="cordova-plugin-mauron85-background-geolocation" source="npm" spec="3.0.0-alpha.48"> -->
 	<plugin name="@mauron85/cordova-plugin-background-geolocation" source="npm">
 		<variable name="ALWAYS_USAGE_DESCRIPTION" value="CELA PERMETTRA AUX USAGERS DE CONNAITRE VOTRE POSITION." />
+		<variable name="MOTION_USAGE_DESCRIPTION" value="CELA PERMETTRA AUX USAGERS DE CONNAITRE VOTRE POSITION." /> 
 	</plugin>
 	<plugin name="cordova-plugin-background-task" source="npm" />
 	<!-- 
