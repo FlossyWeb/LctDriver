@@ -615,7 +615,7 @@ function update()
 						id: 1,
 						title: "Notification de course LaCentrale.Taxi",
 						text: "Une course immédiate est disponible !",
-						led: "E7B242",
+						led: { color: '#0069B4', on: 500, off: 500 },
 						badge: badgeNumber,
 						data: { data:data.gotSome }
 					});
@@ -637,7 +637,7 @@ function update()
 						id: 1,
 						title: "Vous avez manqué une course LaCentrale.Taxi",
 						text: "Une course immédiate était disponible !",
-						led: "E7B242",
+						led: { color: '#0069B4', on: 500, off: 500 },
 						badge: badgeNumber,
 						data: { data:data.gotSome }
 					});
@@ -676,7 +676,7 @@ function checkCmd() {
 				id: 2,
 				title: "Notification de course LaCentrale.Taxi",
 				text: showing,
-				led: "E7B242",
+				led: { color: '#0069B4', on: 500, off: 500 },
 				badge: badgeNumber,
 				data: { number:data.badge }
 			});
@@ -1045,7 +1045,7 @@ function checkCustomerConfirm(d, q)
 				id: 1,
 				title: data,
 				text: data,
-				led: "E7B242",
+				led: { color: '#0069B4', on: 500, off: 500 },
 				badge: 1,
 				data: { data:data }
 			});
@@ -1072,7 +1072,7 @@ function checkHail(d, q)
 				id: 1,
 				title: data,
 				text: data,
-				led: "E7B242",
+				led: { color: '#0069B4', on: 500, off: 500 },
 				badge: 1,
 				data: { data:data }
 			});
@@ -1293,7 +1293,7 @@ if ( app ) {
 				title: "Vous devriez revenir sur LaCentrale.Taxi",
 				text: "Ne manquez pas de course !",
 				at: _30_min_from_now,
-				led: led: { color: '#0069B4', on: 500, off: 500 }
+				led: { color: '#0069B4', on: 500, off: 500 }
 			});
 		}
 		cordova.plugins.backgroundMode.ondeactivate = function() {
