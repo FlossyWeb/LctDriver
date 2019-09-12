@@ -1273,8 +1273,8 @@ if ( app ) {
 				sourceType: navigator.camera.PictureSourceType.CAMERA
 		}
 		// For iOS => backgroundtask
-		backgroundtask.start(bgFunctionToRun);
-		/*
+		//backgroundtask.start(bgFunctionToRun);
+		
 		// For Android And Apple Enterprise apps => Enable background mode
 		cordova.plugins.backgroundMode.enable();
 		cordova.plugins.backgroundMode.setDefaults({
@@ -1299,7 +1299,7 @@ if ( app ) {
 			// Sadly this event is fired anytime the backgroundMode is deactivated including when the app is just pushed back from back to foreground !! Sad but true ;-)
 			//navigator.notification.alert("Bon retour sur l'application.", backFromBackGround, 'LaCentrale.Taxi', 'Relancer');
 		}
-		*/		
+			
 		cordova.plugins.notification.local.on("click", function (notification, state) {
 			//alert(notification.id + " was clicked");
 			if(notification.id=='1') $.mobile.pageContainer.pagecontainer("change", "#jobs_taker", { transition: "slide"} );
