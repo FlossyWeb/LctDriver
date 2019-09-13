@@ -239,8 +239,6 @@ $( '#directions_map' ).live( 'pagebeforeshow',function(event){
 		});
 	}
 	var addrVtc;
-	var addrRdv = $.sessionStorage.getItem('rdv');
-	var addrDestFinal = $.sessionStorage.getItem('dest');
 	$('#infos_drive').empty();
 	$.get('https://api-adresse.data.gouv.fr/reverse/', {lat: lat, lon: lng, type: ''}, function(data) {
 		//alert(data.features[0].properties.label+' - '+data.features[0].properties.postcode);
@@ -248,14 +246,14 @@ $( '#directions_map' ).live( 'pagebeforeshow',function(event){
 			// Reverse geocoding is OK...
 			addrVtc = data.features[0].properties.label;
 			$('#from').val(addrVtc);
-			if(addrRdv!='') {
-				let joinClientBtn = '<a href="'+encodeURI('https://www.google.com/maps/dir/?api=1&origin='+addrVtc+'&destination='+addrRdv+'&travelmode=driving')+'" target="_blank" onClick="" class="ui-btn ui-btn-a ui-corner-all ui-shadow ui-icon-navigation ui-btn-icon-left">Rejoindre le client</a>';
+			if(rdv!='') {
+				let joinClientBtn = '<a href="'+encodeURI('https://www.google.com/maps/dir/?api=1&origin='+addrVtc+'&destination='+rdv+'&travelmode=driving')+'" target="_blank" onClick="" class="ui-btn ui-btn-a ui-corner-all ui-shadow ui-icon-navigation ui-btn-icon-left">Rejoindre le client</a>';
 				$('#infos_drive').append(joinClientBtn);
 			}
 		}
 	}, "json");
-	if(addrRdv!=''&& addrDestFinal!='') {
-		let driveClientBtn = '<a href="'+encodeURI('https://www.google.com/maps/dir/?api=1&origin='+addrRdv+'&destination='+addrDestFinal+'&travelmode=driving')+'" target="_blank" onClick="" class="ui-btn ui-btn-b ui-corner-all ui-shadow ui-icon-navigation ui-btn-icon-left">Le mener &agrave; destination</a>';
+	if(rdv!=''&& dest!='') {
+		let driveClientBtn = '<a href="'+encodeURI('https://www.google.com/maps/dir/?api=1&origin='+rdv+'&destination='+dest+'&travelmode=driving')+'" target="_blank" onClick="" class="ui-btn ui-btn-b ui-corner-all ui-shadow ui-icon-navigation ui-btn-icon-left">Le mener &agrave; destination</a>';
 		$('#infos_drive').append(driveClientBtn);
 	}
 });
