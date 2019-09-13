@@ -238,8 +238,6 @@ $( '#directions_map' ).live( 'pagebeforeshow',function(event){
 			//navigator.notification.alert(data);
 		});
 	}
-});
-$('#directions_map').live('pagecreate', function() {
 	var addrVtc;
 	var addrRdv = $.sessionStorage.getItem('rdv');
 	var addrDestFinal = $.sessionStorage.getItem('dest');
@@ -260,6 +258,8 @@ $('#directions_map').live('pagecreate', function() {
 		let driveClientBtn = '<a href="'+encodeURI('https://www.google.com/maps/dir/?api=1&origin='+addrRdv+'&destination='+addrDestFinal+'&travelmode=driving')+'" target="_blank" onClick="" class="ui-btn ui-btn-b ui-corner-all ui-shadow ui-icon-navigation ui-btn-icon-left">Le mener &agrave; destination</a>';
 		$('#infos_drive').append(driveClientBtn);
 	}
+});
+$('#directions_map').live('pagecreate', function() {
 	/*
 	demo.add('directions_map', function() {
 		$('#map_canvas_1').gmap({'center': mobileDemo.center, 'zoom': mobileDemo.zoom, 'disableDefaultUI':true, 'callback': function() {

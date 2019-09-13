@@ -536,7 +536,7 @@ $(document).ready(function(){
 		 }
 		},
 		messages: {
-		 civil: "La oci&eacute;t&eacute; est obligatoire",
+		 civil: "La soci&eacute;t&eacute; est obligatoire",
 		 nom: "Le Nom est obligatoire",
 		 prenom: "Le Pr&eacute;nom est obligatoire",
 		 insee: "La ville est obligatoire",
@@ -638,9 +638,11 @@ $(document).ready(function(){
 	});
 	$("#RegCabStep").validate({
 		rules: {
+		 taxi: "required",
 		 cpro: "required"
 		},
 		messages: {
+		 taxi: "Le N&deg; de taxi / ADS est obligatoire",
 		 cpro: "Le N&deg; de Carte Professionelle est obligatoire"
 		}
 		// Put errors below fields
