@@ -658,9 +658,9 @@ function checkCmd() {
 		if (data.badge != 0)
 		{
 			$('.orders').addClass('badge');
-			$('.ordersjob').addClass('badge');
+			//$('.ordersjob').addClass('badge');
 			$('.orders').empty().append(data.badge);
-			$('.ordersjob').empty().append(data.badge);
+			//$('.ordersjob').empty().append(data.badge);
 			navigator.notification.beep(2);
 			navigator.vibrate(1000);
 			$("#screen_bookings").empty().append(data.snippet);
@@ -684,9 +684,9 @@ function checkCmd() {
 				//alert("done");
 			});
 			$('.orders').removeClass('badge');
-			$('.ordersjob').removeClass('badge');
+			//$('.ordersjob').removeClass('badge');
 			$('.orders').empty();
-			$('.ordersjob').empty();
+			//$('.ordersjob').empty();
 		}
 	}, "json").always(function() {
 		setTimeout('checkCmd()', 300000);
@@ -701,15 +701,15 @@ function refreshCmd() {
 			$("#screen_bookings").append(data.snippet);
 			$("#screen_bookings").trigger('create');
 			$('.orders').addClass('badge');
-			$('.ordersjob').addClass('badge');
+			//$('.ordersjob').addClass('badge');
 			$('.orders').empty().append(data.badge);
-			$('.ordersjob').empty().append(data.badge);
+			//$('.ordersjob').empty().append(data.badge);
 		}
 		else {
 			$('.orders').removeClass('badge');
-			$('.ordersjob').removeClass('badge');
+			//$('.ordersjob').removeClass('badge');
 			$('.orders').empty();
-			$('.ordersjob').empty();
+			//$('.ordersjob').empty();
 		}
 	}, "json").always(function() { $.mobile.loading( "hide" ); });
 }
@@ -721,15 +721,15 @@ function refreshCmdBackground() {
 			$("#screen_bookings").append(data.snippet);
 			$("#screen_bookings").trigger('create');
 			$('.orders').addClass('badge');
-			$('.ordersjob').addClass('badge');
+			//$('.ordersjob').addClass('badge');
 			$('.orders').empty().append(data.badge);
-			$('.ordersjob').empty().append(data.badge);
+			//$('.ordersjob').empty().append(data.badge);
 		}
 		else {
 			$('.orders').removeClass('badge');
-			$('.ordersjob').removeClass('badge');
+			//$('.ordersjob').removeClass('badge');
 			$('.orders').empty();
-			$('.ordersjob').empty();
+			//$('.ordersjob').empty();
 		}
 	}, "json");
 }
@@ -1280,6 +1280,7 @@ if ( app ) {
 			ticker: 'App toujours en fonction, nous vous informons des courses en cours...',
 			text:   'Nous vous informons des courses en cours...'
 		});
+		/*
 		// Called when background mode has been activated or deactivated
 		cordova.plugins.backgroundMode.onactivate = function () {
 			//Sound_Off();
@@ -1297,7 +1298,7 @@ if ( app ) {
 			// Sadly this event is fired anytime the backgroundMode is deactivated including when the app is just pushed back from back to foreground !! Sad but true ;-)
 			//navigator.notification.alert("Bon retour sur l'application.", backFromBackGround, 'LaCentrale.Taxi', 'Relancer');
 		}
-			
+		*/
 		cordova.plugins.notification.local.on("click", function (notification, state) {
 			//alert(notification.id + " was clicked");
 			if(notification.id=='1') $.mobile.pageContainer.pagecontainer("change", "#jobs_taker", { transition: "slide"} );

@@ -219,10 +219,10 @@ label.error { float: none; color: red; padding-left: .5em; vertical-align: top; 
 }
 #later {
 	color: #CCC;
-	background: -webkit-linear-gradient(rgba(255,0,0,0), #FF0); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(rgba(255,0,0,0), #FF0); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(rgba(255,0,0,0), #FF0); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(rgba(255,0,0,0), #FF0); /* Standard syntax */
+	background: -webkit-linear-gradient(rgba(255,0,0,0), #333); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(rgba(255,0,0,0), #333); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(rgba(255,0,0,0), #333); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(rgba(255,0,0,0), #333); /* Standard syntax */
 	border: #666;
 	box-shadow: 0 0 2px #CCC;
 	-moz-box-shadow: 0 0 2px #CCC; 
@@ -234,7 +234,7 @@ label.error { float: none; color: red; padding-left: .5em; vertical-align: top; 
 }			
 .later_head {
 	font-size: 24px;
-	color: #FC0;
+	color: #4DB58B;
 }
 #pro {
 	color: #CCC;
