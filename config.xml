@@ -71,7 +71,7 @@
 		<variable name="ALWAYS_USAGE_DESCRIPTION" value="CELA PERMETTRA AUX USAGERS DE CONNAITRE VOTRE POSITION." />
 		<variable name="MOTION_USAGE_DESCRIPTION" value="CELA PERMETTRA AUX USAGERS DE CONNAITRE VOTRE POSITION." /> 
 	</plugin>
-	<plugin name="cordova-plugin-better-background-mode" source="npm" />
+	<plugin name="cordova-plugin-better-background-mode" source="npm" spec="0.7.5" />
 	<!-- 
 	<plugin name="cordova-plugin-background-task" source="npm" />
 	<plugin name="cordova-plugin-background-mode" source="npm" spec="0.7.2" />
