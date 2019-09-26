@@ -54,7 +54,7 @@ var notifyOnce = true;
 
 // Detect wether it is an App or WebApp
 var app;
-var appVersion = "1.0.0";
+var appVersion = "1.0.1";
 var devicePlatform;
 		
 // getLocation & secureCall
