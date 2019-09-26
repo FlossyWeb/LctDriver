@@ -1280,9 +1280,8 @@ if ( app ) {
 			ticker: 'App toujours en fonction, nous vous informons des courses en cours...',
 			text:   'Nous vous informons des courses en cours...'
 		});
-
 		// Called when background mode has been activated or deactivated
-		cordova.plugins.backgroundMode.onactivate = function () {
+		cordova.plugins.backgroundMode.on('activate', function () {
 			//Sound_Off();
 			//cordova.plugins.notification.local.clear(3, function() {});
 			var now = new Date().getTime(),
@@ -1293,11 +1292,7 @@ if ( app ) {
 				at: _30_min_from_now,
 				led: { color: '#0069B4', on: 500, off: 500 }
 			});
-		}
-		cordova.plugins.backgroundMode.ondeactivate = function() {
-			// Sadly this event is fired anytime the backgroundMode is deactivated including when the app is just pushed back from back to foreground !! Sad but true ;-)
-			//navigator.notification.alert("Bon retour sur l'application.", backFromBackGround, 'LaCentrale.Taxi', 'Relancer');
-		}
+		});
 		
 		cordova.plugins.notification.local.on("click", function (notification, state) {
 			//alert(notification.id + " was clicked");
