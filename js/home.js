@@ -1587,7 +1587,15 @@ function UDPTransmitterInitializationError(error) {
 function myTaxiDown()
 {
 	//window.open(url,'_blank','location=yes,enableViewportScale=yes,closebuttoncaption=Fermer');
-	if(app) window.open('lacentraletaxiclient://?from=driver', '_system');
+	//if(app) window.open('lacentraletaxiclient://?from=driver', '_system');
+	if(app) {
+		if(devicePlatform=='iOS')
+			window.open('itms-apps://itunes.apple.com/app/id1461108444', '_system');
+		else if(devicePlatform=='Android')
+			window.open('market://details?id=com.chauffeursvtc.client', '_system');
+		else
+			window.open('https://www.lacentrale.taxi/stores.php?app=cvclient', '_system');
+	}
 	else window.open('https://www.lacentrale.taxi/apps/client/', '_blank');
 }
 function Share()
