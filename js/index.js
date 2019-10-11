@@ -98,7 +98,7 @@ function getLocationOnce()
 		//navigator.geolocation.getAccurateCurrentPosition(get_coords, showError, {maxWait:30000});
 	}
 	else {
-		navigator.notification.alert("Localisation impossible.", alertDismissed, 'LaCentrale.Taxi Erreur', 'OK');
+		navigator.notification.alert("Localisation impossible.", alertDismissed, 'LacentraleTAXI Erreur', 'OK');
 	}
 }
 function secureCall(position)
@@ -272,11 +272,11 @@ function uploadPhoto(imageURI) {
 	ft.upload(imageURI, "https://www.lacentrale.taxi/upload.php",
 		function (result) {
 			$.mobile.loading( "hide" );
-			navigator.notification.alert("Le document a bien été envoyé.", alertDismissed, 'LaCentrale.Taxi', 'OK');
+			navigator.notification.alert("Le document a bien été envoyé.", alertDismissed, 'LacentraleTAXI', 'OK');
 		},
 		function (error) {
 			$.mobile.loading( "hide" );
-			navigator.notification.alert('Une erreur est survenue: '+JSON.stringify(error), alertDismissed, 'LaCentrale.Taxi', 'OK');
+			navigator.notification.alert('Une erreur est survenue: '+JSON.stringify(error), alertDismissed, 'LacentraleTAXI', 'OK');
 		}, options
 	);
 }
@@ -467,11 +467,11 @@ function finishUpload() {
 	$.post("https://www.lacentrale.taxi/appclient/register_app_final.php", {tel: $.localStorage.getItem('tel')}, function(data) {
 		if (data.ok=="ok")
 		{
-			if(app) navigator.notification.alert("Votre demande d'inscription au service lacentrale.taxi a bien été prise en compte. L'instruction de votre dossier est normalement très rapide. Vous recevrez prochainement vos identifiants de connexion par mail. Dans cette attente, l'équipe lacentrale.taxi vous souhaite une excellente journée.", alertDismissed, 'LaCentrale.Taxi', 'OK');
+			if(app) navigator.notification.alert("Votre demande d'inscription au service lacentrale.taxi a bien été prise en compte. L'instruction de votre dossier est normalement très rapide. Vous recevrez prochainement vos identifiants de connexion par mail. Dans cette attente, l'équipe lacentrale.taxi vous souhaite une excellente journée.", alertDismissed, 'LacentraleTAXI', 'OK');
 			else alert("Votre demande d'inscription au service lacentrale.taxi a bien été prise en compte. L'instruction de votre dossier est normalement très rapide. Vous recevrez prochainement vos identifiants de connexion par mail. Dans cette attente, l'équipe lacentrale.taxi vous souhaite une excellente journée.");
 		}
 		else {
-			if(app) navigator.notification.alert("Erreur inconnue.", alertDismissed, 'LaCentrale.Taxi', 'OK');
+			if(app) navigator.notification.alert("Erreur inconnue.", alertDismissed, 'LacentraleTAXI', 'OK');
 			else alert("Erreur inconnue.");
 		}
 	}, "json").always(function () {
@@ -479,7 +479,7 @@ function finishUpload() {
 		$('#finishUpload').attr('disable', false);
 		$.mobile.loading( "hide" );
 	}).fail(function (jqXHR, textStatus, errorThrown) {
-		if (app) navigator.notification.alert('Erreur inconnue, le serveur ou la connexion internet sont indisponibles. ' + textStatus+', '+ errorThrown, alertDismissed, 'LaCentrale.Taxi Erreur', 'OK');
+		if (app) navigator.notification.alert('Erreur inconnue, le serveur ou la connexion internet sont indisponibles. ' + textStatus+', '+ errorThrown, alertDismissed, 'LacentraleTAXI Erreur', 'OK');
 		else alert('Erreur inconnue, le serveur ou la connexion internet sont indisponibles. ' + textStatus+', '+ errorThrown, alertDismissed);
 	});
 }
@@ -631,7 +631,7 @@ $(document).ready(function(){
 				$('input[type=submit]#subNameStep').button('enable');
 				$.mobile.loading( "hide" );
 			}).fail(function (jqXHR, textStatus, errorThrown) {
-				if (app) navigator.notification.alert('Erreur inconnue, le serveur ou la connexion internet sont indisponibles. ' + textStatus+', '+ errorThrown, alertDismissed, 'LaCentrale.Taxi Erreur', 'OK');
+				if (app) navigator.notification.alert('Erreur inconnue, le serveur ou la connexion internet sont indisponibles. ' + textStatus+', '+ errorThrown, alertDismissed, 'LacentraleTAXI Erreur', 'OK');
 				else alert('Erreur inconnue, le serveur ou la connexion internet sont indisponibles. ' + textStatus+', '+ errorThrown, alertDismissed);
 			});
 		} // submitHandler Ends
@@ -702,7 +702,7 @@ $(document).ready(function(){
 				$('input[type=submit]#subCabStep').button('enable');
 				$.mobile.loading( "hide" );
 			}).fail(function (jqXHR, textStatus, errorThrown) {
-				if (app) navigator.notification.alert('Erreur inconnue, le serveur ou la connexion internet sont indisponibles. ' + textStatus+', '+ errorThrown, alertDismissed, 'LaCentrale.Taxi Erreur', 'OK');
+				if (app) navigator.notification.alert('Erreur inconnue, le serveur ou la connexion internet sont indisponibles. ' + textStatus+', '+ errorThrown, alertDismissed, 'LacentraleTAXI Erreur', 'OK');
 				else alert('Erreur inconnue, le serveur ou la connexion internet sont indisponibles. ' + textStatus+', '+ errorThrown, alertDismissed);
 			});
 		} // submitHandler Ends
@@ -876,7 +876,7 @@ $(document).ready(function(){
 				$('input[type=submit]#subCbStep').button('enable');
 				$.mobile.loading( "hide" );
 			}).fail(function (jqXHR, textStatus, errorThrown) {
-				if (app) navigator.notification.alert('Erreur inconnue, le serveur ou la connexion internet sont indisponibles. ' + textStatus+', '+ errorThrown, alertDismissed, 'LaCentrale.Taxi Erreur', 'OK');
+				if (app) navigator.notification.alert('Erreur inconnue, le serveur ou la connexion internet sont indisponibles. ' + textStatus+', '+ errorThrown, alertDismissed, 'LacentraleTAXI Erreur', 'OK');
 				else alert('Erreur inconnue, le serveur ou la connexion internet sont indisponibles. ' + textStatus+', '+ errorThrown, alertDismissed);
 			});
 		} // submitHandler Ends
@@ -921,7 +921,7 @@ $(document).ready(function(){
 				$("#returns").empty().append(display);
 				$( "#answer" ).popup( "open", { positionTo: "window" } );
 			}, "json").fail(function (jqXHR, textStatus, errorThrown) {
-				if (app) navigator.notification.alert('Erreur inconnue, le serveur ou la connexion internet sont indisponibles. ' + textStatus+', '+ errorThrown, alertDismissed, 'LaCentrale.Taxi Erreur', 'OK');
+				if (app) navigator.notification.alert('Erreur inconnue, le serveur ou la connexion internet sont indisponibles. ' + textStatus+', '+ errorThrown, alertDismissed, 'LacentraleTAXI Erreur', 'OK');
 				else alert('Erreur inconnue, le serveur ou la connexion internet sont indisponibles. ' + textStatus+', '+ errorThrown, alertDismissed);
 			});
 		} // submitHandler Ends
