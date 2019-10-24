@@ -2,8 +2,8 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.chauffeursvtc.driver"
-		version = "1.0.3"
-		android-versionCode="5">
+		version = "1.0.4"
+		android-versionCode="6">
     
     <author href="http://flossyweb.com" email="contact@flossyweb.com">
         FRANCOIS-REGIS SIMON
@@ -40,7 +40,7 @@
 	<plugin name="cordova-plugin-splashscreen" source="npm" />
 	<plugin name="cordova-plugin-vibration" source="npm" />
 	<plugin name="cordova-plugin-inappbrowser" source="npm" />
-	<plugin name="cordova-plugin-camera" source="npm" >
+	<plugin name="cordova-plugin-camera" source="npm">
         <variable name="CAMERA_USAGE_DESCRIPTION" value="CELA VOUS PERMETTRA DE NOUS ENVOYER DES PHOTOS DE DOCUMENTS OU DE SCANNER DES QR CODES." />  
         <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="CELA VOUS PERMETTRA DE NOUS ENVOYER DES DOCUMENTS." />
 	</plugin>
@@ -77,10 +77,10 @@
 	<plugin name="cordova-plugin-better-background-mode" source="npm" />
 	<plugin name="cordova-plugin-background-mode" source="npm" spec="0.7.2" />
 	<plugin name="nl.x-services.plugins.launchmyapp">
-	-->
 	<plugin name="cordova-plugin-customurlscheme" source="npm">
 		<param name="URL_SCHEME" value="lacentraletaxidriver" />
 	</plugin>
+	-->
 	<plugin name="cordova-plugin-x-socialsharing" source="npm" />
     <!-- <plugin name="cordova-plugin-apprate" spec="https://github.com/pushandplay/cordova-plugin-apprate" source="git" /> -->
 
