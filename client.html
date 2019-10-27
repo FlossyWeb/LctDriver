@@ -80,7 +80,7 @@
 	var regCell3 = $.localStorage.getItem('regCell3');
 	var registeredUser = $.localStorage.getItem('registeredUser');
 	var firstConnexionVar = $.localStorage.getItem('firstConnexionVar');
-	var nom = $.localStorage.getItem('nom') + $.localStorage.getItem('prenom') + ' (TAXI)';
+	var nom = $.localStorage.getItem('nom') + ' ' +$.localStorage.getItem('prenom') + ' (TAXI)';
 	var tel = $.localStorage.getItem('tel');
 	var email = $.localStorage.getItem('email');
 	var operator = 0;
@@ -199,8 +199,8 @@
 							// Reverse geocoding is OK...
 							if(!isAddressTyped) $('#addressInput').val(data.features[0].properties.label);
 							//$('#addressInput2').val(data.features[0].properties.label);
-							$('#addressInput3').val(data.features[0].properties.label);
-							if(!isAddressPricesTyped) $('#addressInputPrices').val(data.features[0].properties.label);
+							//$('#addressInput3').val(data.features[0].properties.label);
+							//if(!isAddressPricesTyped) $('#addressInputPrices').val(data.features[0].properties.label);
 							insee = data.features[0].properties.citycode;
 							zip = data.features[0].properties.postcode;
 							dep = zip.substring(0, 2);
@@ -639,6 +639,7 @@
 			$('.noAppHide').each(function () {
 				$(this).hide();
 			});
+			/*
 			$('#date').prop('type', 'text');
 			$('#when').prop('type', 'text');
 			$('#date').datebox({
@@ -651,6 +652,7 @@
 				overrideTimeOutput: "%k:%M",
 				useFocus: true
 			});
+			*/
 		}
 		// OpenData Areas Only... (#openDep-box)
 		//$("#openDep-box").css("display", "none");
@@ -680,8 +682,8 @@
                 $("#next-box").show("medium");
             }
         }, 500);
-		nom = $.localStorage.getItem('nom');
-		tel = $.localStorage.getItem('tel');
+		//nom = $.localStorage.getItem('nom');
+		//tel = $.localStorage.getItem('tel');
 		$('#Accurate').val(nom);
 		$('#cellular').val(tel);
 		$('.expends').click(function () {
@@ -745,8 +747,8 @@
 				// Reverse geocoding is OK...
 				$('#addressInput').val(data.features[0].properties.label);
 				//$('#addressInput2').val(data.features[0].properties.label);
-				$('#addressInput3').val(data.features[0].properties.label);
-				$('#addressInputPrices').val(data.features[0].properties.label);
+				//$('#addressInput3').val(data.features[0].properties.label);
+				//$('#addressInputPrices').val(data.features[0].properties.label);
 				insee = data.features[0].properties.citycode;
 				zip = data.features[0].properties.postcode;
 				dep = zip.substring(0, 2);
@@ -789,8 +791,8 @@
 				if (results[0]) {
 					$('#addressInput').val(results[0].formatted_address);
 					//$('#addressInput2').val(results[0].formatted_address);
-					$('#addressInput3').val(results[0].formatted_address);
-					$('#addressInputPrices').val(results[0].formatted_address);
+					//$('#addressInput3').val(results[0].formatted_address);
+					//$('#addressInputPrices').val(results[0].formatted_address);
 					for(var i=0; i < results[0].address_components.length; i++)
 					{
 						var component = results[0].address_components[i];
@@ -2286,7 +2288,7 @@
 				</td><td>
 					<p>&nbsp;</p>
 				</td><td align="center">
-					<a href="#" onClick="myTaxiBack()" class="ui-btn ui-btn-c ui-btn-inline ui-shadow ui-corner-all ui-btn-icon-right ui-icon-back">Retour</a>
+					<button onClick="myTaxiBack()" class="ui-btn ui-btn-c ui-shadow ui-corner-all ui-btn-icon-right ui-icon-back" style="width:90%; font-size:1em;">Retour</button>
 					<!--
 					<a href="#homepanel" id="panel_poper" data-role="none" title="Ouvrir le menu" style="width:90%;">
 						<img src="visuels/ico_menu.png" alt="Menu" width="100%" style="max-width:175px;"/>
@@ -2305,6 +2307,8 @@
                 <input type="hidden" id="group" size="16" value="1"/>
                 <input type="hidden" id="exclu" size="1" value="0"/>
                 <input type="hidden" id="goFavs" size="1" value="0"/>
+                <input type="hidden" id="when" size="1" value=""/>
+                <input type="hidden" id="date" size="1" value=""/>
                 <table width="100%" border="0" summary="Informations relatives à la commande du Taxi">
                 	<thead><tr><th width="90%"></th><th width="10%"></th></tr></thead>
                     <tbody>
