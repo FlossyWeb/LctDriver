@@ -1585,6 +1585,10 @@ function UDPTransmitterInitializationError(error) {
 	navigator.notification.alert('UDP INIT ERROR: '+error, alertDismissed, 'LacentraleTAXI Erreur', 'OK');
 }
 */
+function myTaxiClient()
+{
+	document.location.href='client.html';
+}
 function myTaxiDown()
 {
 	//window.open(url,'_blank','location=yes,enableViewportScale=yes,closebuttoncaption=Fermer');
